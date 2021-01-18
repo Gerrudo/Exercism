@@ -4,19 +4,18 @@
 //
 
 export const decodedValue = (inputColours) => {
-  const COLORS = [
-    'black',
-    'brown',
-    'red',
-    'orange',
-    'yellow',
-    'green',
-    'blue',
-    'violet',
-    'grey',
-    'white'
-  ];
-
-  //There must be a better way to than using parseInt I believe, but this does work. 
-  return parseInt(`${COLORS.indexOf(inputColours[0])}${COLORS.indexOf(inputColours[1])}`);
+  return COLORS.indexOf(inputColours[0]) * 10 + COLORS.indexOf(inputColours[1]);
 };
+
+const COLORS = [
+  'black',
+  'brown',
+  'red',
+  'orange',
+  'yellow',
+  'green',
+  'blue',
+  'violet',
+  'grey',
+  'white'
+];
