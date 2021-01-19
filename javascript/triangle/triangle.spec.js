@@ -29,12 +29,12 @@ describe('Triangle', () => {
   });
 
   describe('isosceles triangle', () => {
-    xtest('last two sides are equal', () => {
+    test('last two sides are equal', () => {
       const triangle = new Triangle(3, 4, 4);
       expect(triangle.isIsosceles).toBe(true);
     });
 
-    xtest('first two sides are equal', () => {
+    test('first two sides are equal', () => {
       const triangle = new Triangle(4, 4, 3);
       expect(triangle.isIsosceles).toBe(true);
     });

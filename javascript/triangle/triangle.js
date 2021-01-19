@@ -7,11 +7,11 @@ export class Triangle {
   constructor(...sides) {
     this.sides = sides;
   }
+  
   get isEquilateral() {
-    //this will not work if one of the sides equal 1, as I think it's checking the total of all values
     if (this.sides[0,1,2] === 0) {
       return false;
-    }else if  (this.sides[0] === this.sides[1] && this.sides[1] === this.sides[2]) {
+    }else if (this.sides[0,1,2] && this.sides[1,2,0] === this.sides[2,0,1]) {
       return true;
     }else {
       return false;
@@ -19,10 +19,21 @@ export class Triangle {
   }
 
   get isIsosceles() {
-
+    if (this.sides[0,1,2] === 0){
+      return false
+    }else if(this.sides[0] === this.sides[1,2] || this.sides[1] === this.sides[0,2] || this.sides[2] === this.sides[0,1]) {
+      return true;
+    }else {
+      return false
+    }
   }
 
   get isScalene() {
 
   }
 }
+
+/*
+We could possibily look at running a for loop in the array, and once the action is finished, if a tringle side doesn't meet equirments,
+Then it is spliced from the array, leaving only 2 or less elements to compare. 
+*/
