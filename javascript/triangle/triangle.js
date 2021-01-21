@@ -13,7 +13,7 @@ export class Triangle {
     if (newSides.length === 0) {
       return true;
     }else {
-      return false;
+      return newSides.length;
     }
   }
 
@@ -37,9 +37,10 @@ export class Triangle {
 
   findType(sides) {
     let i;
-    for (i = 0; i < sides.length; i++) {
-      if (sides[i] === sides[0,1,2]) {
-        sides.splice(sides.indexOf(i));
+    for (i = 0; i < 3; i++) {
+      //issues lie here, as we can't statically check the elements as it will always return true
+      if (sides[i] === sides[0] || sides[i] === sides[1] || sides[i] === sides[2]) {
+        sides.splice(sides.indexOf(i), 1);
       }
     }
     return sides;

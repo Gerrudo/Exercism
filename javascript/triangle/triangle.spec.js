@@ -12,29 +12,29 @@ describe('Triangle', () => {
       expect(triangle.isEquilateral).toBe(false);
     });
 
-    test('no sides are equal', () => {
+    xtest('no sides are equal', () => {
       const triangle = new Triangle(5, 4, 6);
       expect(triangle.isEquilateral).toBe(false);
     });
 
-    test('all zero sides is not a triangle', () => {
+    xtest('all zero sides is not a triangle', () => {
       const triangle = new Triangle(0, 0, 0);
       expect(triangle.isEquilateral).toBe(false);
     });
 
-    test('sides may be floats', () => {
+    xtest('sides may be floats', () => {
       const triangle = new Triangle(0.5, 0.5, 0.5);
       expect(triangle.isEquilateral).toBe(true);
     });
   });
 
   describe('isosceles triangle', () => {
-    test('last two sides are equal', () => {
+    xtest('last two sides are equal', () => {
       const triangle = new Triangle(3, 4, 4);
       expect(triangle.isIsosceles).toBe(true);
     });
 
-    test('first two sides are equal', () => {
+    xtest('first two sides are equal', () => {
       const triangle = new Triangle(4, 4, 3);
       expect(triangle.isIsosceles).toBe(true);
     });
