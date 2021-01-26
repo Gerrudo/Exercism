@@ -5,5 +5,5 @@
 
 export const gigasecond = (inputDate) => {
   let gsDate = new Date(inputDate);
-  return new Date(gsDate.setUTCSeconds(gsDate.getUTCSeconds() + 10**9));
+  return new Date(gsDate.setUTCSeconds(gsDate.getUTCSeconds()+10**9));
 };
