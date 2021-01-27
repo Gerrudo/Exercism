@@ -1,0 +1,9 @@
+exercism.exe
+shell/exercism.fish
+shell/exercism_completion.zsh
+shell/exercism_completion.bash
+shell/README.md
+LICENSE
+README.md
+.vscode/settings.json
+javascript/triangle/package-lock.json
