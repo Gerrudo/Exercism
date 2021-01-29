@@ -3,6 +3,8 @@
 // convenience to get you started writing code faster.
 //
 
-export const gigasecond = (inputDate, outputDate = new Date(inputDate.getTime()), oneGigasecond = 10**9) => {
-  return new Date(outputDate.setUTCSeconds(inputDate.getUTCSeconds()+oneGigasecond));
+const oneGigasecond = 10**9;
+
+export const gigasecond = (inputDate) => {
+  return new Date(new Date(inputDate.getTime()).setUTCSeconds(inputDate.getUTCSeconds()+oneGigasecond));
 };
