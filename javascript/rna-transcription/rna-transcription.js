@@ -4,25 +4,17 @@
 //
 
 export const toRna = ([...dna]) => {
-  let rna = '';
-  for (let i = 0; i < dna.length; i++) {
-    switch (dna[i]) {
-      case 'C':
-        rna += 'G';
-        break;
-      case 'G':
-        rna += 'C';
-        break;
-      case 'T':
-        rna += 'A';
-        break;
-      case 'A':
-        rna += 'U';
-        break;
-      default: 
-        rna += '';
-        break;
-    }
+  const rnaConvert = {
+     'G': 'C',
+     'C': 'G',
+     'T': 'A',
+     'A': 'U',
+     'default': ''
   }
-  return rna;
+
+  const rna = dna.map(x => 
+    (rnaConvert[x] || rnaConvert['default'])
+  );
+
+  return rna.join('');
 };
