@@ -7,5 +7,6 @@ LICENSE
 README.md
 .vscode/settings.json
 javascript/triangle/package-lock.json
-*/node_modules/*
+**node_modules
+
 
