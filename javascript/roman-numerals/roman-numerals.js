@@ -3,18 +3,23 @@
 // convenience to get you started writing code faster.
 //
 
-export const toRoman = (...num, romanNum) => {
-
-  //Single digit
-  let single = num.slice(3)
-  if (single <5)
-  //Double Digit
-  let double = num.slice(2)
-
-  //Triple Digit
-  let triple = num.slice(1)
-
-  //Quadruple Digit
-  let quad = num.slice(0)
+export const toRoman = (...int) => {
+  const map = { M:1000,CM:900,D:500,CD:400,C:100,XC:90,L:50,XL:40,X:10,IX:9,V:5,IV:4,I:1 };
+  /*
+  let roman ='';
+  for(let i in map){
+    
+    while(int >= map[i]){
+      roman += i;
+      int -= map[i];
+    }
+  }
+*/
+  const roman = int.map(x => (
+      map[x],
+      int.splice(map[x])
+    )
+  );
   
+  return roman;
 };
