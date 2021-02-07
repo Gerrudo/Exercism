@@ -15,6 +15,5 @@ export const age = (planet, seconds) => {
     'neptune': 164.79132
   };
   const earthYear = 31557600;
-  const calc = (seconds / earthYear) / orbPeriods[planet];
-  return Math.round(calc * 100) / 100;
+  return Math.round((seconds / earthYear) / orbPeriods[planet] * 100) / 100;
 };
