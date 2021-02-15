@@ -10,10 +10,12 @@ export class Clock {
   }
 
   toString() {
-    const format = toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
-
+    const stringify = toLocaleString('en-US', {minimumIntegerDigits: 2, useGrouping:false});
+    
     if (this.hour < 24 && this.minutes < 60) {
-      return `${(this.hour).format}:${(this.minutes).format}`
+      return `${this.hour.stringify}:${this.minutes.stringify}`
+    }else {
+      return `${Math.floor(this.hour / 24)}:${Math.floor(this.minutes / 60)}`
     }
   }
 
