@@ -17,14 +17,20 @@ export class Clock {
     if (this.hour < 23 && this.minutes < 59) {
       return `${this.stringify(this.hour)}:${this.stringify(this.minutes)}`;
     }else{
-      this.hour = Math.floor(this.hour / 25);
-      this.minutes = Math.floor(this.minutes / 61);
-      if (this.hour <= 24){
-        this.hour - 24
+      if (this.hour !== 24) {
+        this.hour %= 24;
       }
-      if (this.minutes <= 60){
-        this.hour + 1
-        this.minutes - 60
+      if (this.minutes !== 60) {
+        this.minutes %= 60;
+      }
+      //24:00 is 00:00
+      if (this.hour >= 24){
+        this.hour = 0
+      }
+      //60 minutes is new hour
+      if (this.minutes >= 60){
+        this.hour++
+        this.minutes = 0
       }
       return `${this.stringify(this.hour)}:${this.stringify(this.minutes)}`;
     }
