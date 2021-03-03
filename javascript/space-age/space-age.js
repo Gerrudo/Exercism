@@ -16,5 +16,6 @@ const ORBITAL_PERIODS = {
 const EARTH_YEAR_IN_SECONDS = 31557600;
 
 export const age = (planet, seconds) => {
-  return Math.round((seconds / EARTH_YEAR_IN_SECONDS) / ORBITAL_PERIODS[planet] * 100) / 100;
+  const AGE_CALCULATION = seconds / EARTH_YEAR_IN_SECONDS / ORBITAL_PERIODS[planet]
+  return parseFloat(AGE_CALCULATION.toFixed(2));
 };
