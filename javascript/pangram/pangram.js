@@ -6,7 +6,7 @@
 
 export const isPangram = ([...sentence]) => {
 
-  let alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+  let alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
 
   sentence.map(x => {
     if(alphabet.indexOf(x.toLowerCase(), 0) >= 0) {
@@ -14,9 +14,11 @@ export const isPangram = ([...sentence]) => {
     }
   })
 
-  if (alphabet.length <= 26){
-    return true;
+  if (alphabet.length == 0){
+    //return true;
+    return alphabet 
   }else {
-    return false;
+    //return false;
+    return alphabet
   }
 };
