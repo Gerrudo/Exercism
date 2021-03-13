@@ -15,10 +15,8 @@ export const isPangram = ([...sentence]) => {
   })
 
   if (alphabet.length == 0){
-    //return true;
-    return alphabet 
+    return true;
   }else {
-    //return false;
-    return alphabet
+    return false;
   }
 };
