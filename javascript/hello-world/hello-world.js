@@ -4,6 +4,5 @@
 //
 
 export const hello = () => {
-  const returnedString = 'Hello, World!';
-  return (returnedString);
+  return ('Hello, World!');
 };
